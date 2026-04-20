@@ -49,7 +49,7 @@ app.use("/api/messages", messageRouter);
 // Serve frontend (React build from dist folder)
 app.use(express.static(path.join(process.cwd(), "dist")));
 
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(process.cwd(), "dist", "index.html"));
 });
 
